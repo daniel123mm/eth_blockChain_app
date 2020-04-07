@@ -22,7 +22,6 @@ function update(){
 //get list from server
 var app = angular.module('myApp',['angular.filter']);
 app.controller('customersCtrl', function($scope, $http){
-    httpRequest("getCountryList", "GET", "");
     $scope.confirm = function() {
         var name = document.getElementById("cname").value;
         var capital = document.getElementById("capitalName").value;
