@@ -68,19 +68,21 @@
 </div>
 
 <!-- Top menu -->
-<div class="w3-top">
+<div class="w3-top w3-light-grey">
   <div class=" w3-xlarge" style="max-width:1500px;margin:auto">
     <div class="fa fa-bars fa-lg w3-button w3-padding-16 w3-left" onclick="w3_open()"></div>
     <div class="w3-right w3-padding-16 w3-button" onclick="location.href='/record'"><i class="fa fa-clipboard"></i>&nbsp;紀錄</div>
     <div class="w3-display-middle w3-padding-16 w3-button" onclick="location.href='/'">My Trip</div>
   </div>
 </div>
-  
+
+<div style="display:none;" id="loader"></div>
+
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
 
   <!-- Photo Grid-->
-  <div class="w3-row-padding " ng-repeat="countries in countryList | chunkBy:4">
+  <div style="display:block;" id="tripGrid" class="w3-row-padding " ng-repeat="countries in countryList | chunkBy:4">
     <div class="w3-quarter w3-container"  ng-repeat="country in countries">
       <img ng-src="{{country.img}}" style="width:100%">
       <div class="w3-container  w3-white" >

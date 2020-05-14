@@ -3,8 +3,8 @@ const path = require('path');
 const fs = require('fs-extra');
 const abi = require('./ABI/country_ABI.json');
 const etherumUrl = 'http://localhost:8545';
-const address = '0xba0706c582df3fc7c6824681e8fa265994e092b4';
-const contractAddress = '0x16f376CAF73Bb2d4863c9EBB208510f40EC1360c';
+const address = '0x539EF89964fded7C715054923A80B9fDfe272457';
+const contractAddress = '0x14a44e93db17d126101b516cE1CB0756Fc3cD51a';
 
 //connected to etherum node
 var web3 = new Web3();

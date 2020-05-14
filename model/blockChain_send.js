@@ -3,9 +3,9 @@ const Miner = require('web3-eth-miner');
 const abi = require('./ABI/country_ABI.json');
 const blockChain = require('./blockChain_call');
 const etherumUrl = 'http://localhost:8545';
-const address = '0xba0706c582df3fc7c6824681e8fa265994e092b4';
+const address = '0x539EF89964fded7C715054923A80B9fDfe272457';
 const password = "daniel";
-const contractAddress = '0x16f376CAF73Bb2d4863c9EBB208510f40EC1360c';
+const contractAddress = '0x14a44e93db17d126101b516cE1CB0756Fc3cD51a';
 
 //connected to etherum node
 var web3 = new Web3();
@@ -44,7 +44,7 @@ exports.updateCountry = async function(id, name, capital, img, desc){
     if(unlock){
         var contractInstance = new web3.eth.Contract(abi,contractAddress);
         console.log("Update data....");
-        await contractInstance.methods.updateCountries(parseInt(id) , name, capital,img, desc).send({from:address}).then(async(receipt)=>{
+        await contractInstance.methods.updateCounties(parseInt(id) , name, capital,img, desc).send({from:address}).then(async(receipt)=>{
             console.log(receipt);
             success = receipt.status;
         });

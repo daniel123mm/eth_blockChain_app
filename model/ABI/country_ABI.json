@@ -1,10 +1,82 @@
 [
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_capital",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_img",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_describe",
+				"type": "string"
+			}
+		],
+		"name": "insertCountry",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
+		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_capital",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_img",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_describe",
+				"type": "string"
+			}
+		],
+		"name": "updateCounties",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
 		"inputs": [],
 		"name": "getAllCountries",
 		"outputs": [
@@ -41,10 +113,12 @@
 				"type": "tuple[]"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [],
 		"name": "getCountries",
 		"outputs": [
@@ -74,10 +148,12 @@
 				"type": "string[]"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [],
 		"name": "getTotalCountries",
 		"outputs": [
@@ -87,73 +163,8 @@
 				"type": "uint256"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_id",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_capital",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_img",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_describe",
-				"type": "string"
-			}
-		],
-		"name": "insertCountry",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_id",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_capital",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_img",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_describe",
-				"type": "string"
-			}
-		],
-		"name": "updateCountries",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]

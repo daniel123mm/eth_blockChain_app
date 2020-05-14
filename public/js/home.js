@@ -31,6 +31,8 @@ app.controller('customersCtrl', function($scope, $http){
         var obj = {"name":name,"capital":capital,"img":img,"des":des};
         httpRequest("newCountry","POST",obj);
         document.getElementById("insertForm").style.display = "none";
+        document.getElementById("tripGrid").style.display = "none";
+        document.getElementById("loader").style.display = "block";
     };
 
     $scope.updateConfirm = function() {
@@ -43,6 +45,8 @@ app.controller('customersCtrl', function($scope, $http){
         var obj = {"id":id, "name":name, "capital":capital, "img":img, "des":des};
         httpRequest("updateCountry","PUT",obj);
         document.getElementById("updateForm").style.display = "none";
+        document.getElementById("tripGrid").style.display = "none";
+        document.getElementById("loader").style.display = "block";
     }
 
     function httpRequest(api, method, obj){
@@ -55,8 +59,9 @@ app.controller('customersCtrl', function($scope, $http){
         }).then(function success(response) {
             if(api == "getCountryList"){
                 $scope.countryList = response.data;
+                document.getElementById("tripGrid").style.display = "block";
+                document.getElementById("loader").style.display = "none";
                 console.log($scope.countryList)
-
             }else{
                 httpRequest("getCountryList", "GET", "");
             }

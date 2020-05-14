@@ -4,7 +4,9 @@ var express = require('express'),
 	Server = require('http').createServer(app),
 	path = require('path'),
 	Router = require('./router/router'),
-	bodyParser = require("body-parser")
+	bodyParser = require("body-parser"),
+	helmet = require('helmet');
+
 	//cons = require('consolidate'); //install consolidate and swig
 
 
@@ -16,6 +18,9 @@ app.use(express.json({limit: '50mb' }));
 app.use(express.urlencoded({limit: '50mb', extended: true, parameterLimit: 1000000}));
 app.use(bodyParser.json());
 app.set("port" , WEB_PORT);
+
+//security
+app.use(helmet());
 
 //view engine setup
 app.set("views" , path.join(__dirname, "view"));

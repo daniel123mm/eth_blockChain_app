@@ -1,6 +1,5 @@
 const Web3 = require('web3');
 const etherumUrl = 'http://localhost:8545';
-const address = '0xba0706c582df3fc7c6824681e8fa265994e092b4';
 
 //connected to etherum node
 var web3 = new Web3();
