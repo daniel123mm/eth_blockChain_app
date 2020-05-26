@@ -7,7 +7,6 @@ var express = require('express'),
 	bodyParser = require("body-parser"),
 	helmet = require('helmet');
 
-	//cons = require('consolidate'); //install consolidate and swig
 
 
 var WEB_PORT = 8080;
