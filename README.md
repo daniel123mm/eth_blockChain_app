@@ -1,1 +1,3 @@
-# The Ethereum web DApp
+# The Ethereum web DApp  
+
+simple project of blockchain  
